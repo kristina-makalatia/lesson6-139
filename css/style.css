@@ -1,0 +1,80 @@
+/* center styles */
+.wraper {
+    width: 400px;
+    height: 400px;
+    background-color: lightblue;
+    position: relative;
+
+    /* transition-property: all;
+    transition-duration: 0.5s;
+    transition-timing-function: linear;
+    transition-delay: 2s; */
+    transition: all 0.5s linear 2s;
+}
+.block {
+    width: 150px;
+    height: 150px;
+    background-color: red;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) rotate(45deg);
+    transition: all 0.5s linear;
+}
+.text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+/* hover */
+.wraper:hover {
+    background-color: yellow;
+    cursor: pointer;
+    
+}
+.block:hover {
+    background-color: green;
+    transform: translate(-50%, -50%) rotate(0deg);
+}
+/* .wraper:hover .block {
+    background-color: blue;
+} */
+
+
+/* car animation */
+.image-car {
+    width: 200px;
+    /* animation-name: caranimation;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in;
+    animation-delay: 2s; */
+    animation: caranimation2 5s  ease-in infinite alternate 2s;
+    /* position: absolute; */
+}
+
+.car-wraper {
+    margin-top: 80px;
+    /* position: relative; */
+}
+
+
+/* keyframe animation */
+/* @keyframes caranimation {
+    0% {left: 0;}
+    20% {left: 200px;}
+    50% {left: 400px;}
+    70% {left: 600px;}
+    100% {left: 800px;}
+} */
+
+@keyframes caranimation2 {
+    0% {transform: translateX(0);}
+    20% {transform: translateX(200px);}
+    50% {transform: translateX(400px);}
+    70% {transform: translateX(600px);}
+    100% {transform: translateX(800px);}
+}
