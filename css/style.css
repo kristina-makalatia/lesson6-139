@@ -1,80 +1,73 @@
-/* center styles */
-.wraper {
-    width: 400px;
-    height: 400px;
-    background-color: lightblue;
-    position: relative;
-
-    /* transition-property: all;
-    transition-duration: 0.5s;
-    transition-timing-function: linear;
-    transition-delay: 2s; */
-    transition: all 0.5s linear 2s;
+.container-block {
+    width: 1171px;
+    margin:  0 auto;
+    background-color: gray;
 }
-.block {
-    width: 150px;
-    height: 150px;
-    background-color: red;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%) rotate(45deg);
-    transition: all 0.5s linear;
+.size {
+    width: 371px;
+    height: 374px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
-.text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-
-/* hover */
-.wraper:hover {
+.block01 {
     background-color: yellow;
-    cursor: pointer;
-    
 }
-.block:hover {
+.block02 {
+    background-color: lightblue;
+}
+.block03 {
+    background-color: aquamarine;
+}
+.row01 {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.blue-box {
+    width: 88px;
+    height: 88px;
+    background-color: #325DFF;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.text-wraper {
+    width: 250px;
+    background-color: blueviolet;
+    text-align: center;
+}
+.horizontal-row-wraper {
+    margin-top:25px;
+}
+.text-block {
+    width: 771px;
+    margin: 0 auto;
+    background-color: darkseagreen;
+    text-align: center;
+}
+
+/* pseudo classes */
+.size:nth-child(1),
+.size:nth-child(2),
+.size:nth-child(3) {
+    background-color: red;
+    margin-bottom: 25px;
+}
+
+.size:nth-child(4) {
+    background-color: pink;
+}
+.size:nth-child(5) {
+    background-color: yellow;
+}
+.size:nth-child(6) {
     background-color: green;
-    transform: translate(-50%, -50%) rotate(0deg);
-}
-/* .wraper:hover .block {
-    background-color: blue;
-} */
-
-
-/* car animation */
-.image-car {
-    width: 200px;
-    /* animation-name: caranimation;
-    animation-duration: 5s;
-    animation-iteration-count: infinite;
-    animation-timing-function: ease-in;
-    animation-delay: 2s; */
-    animation: caranimation2 5s  ease-in infinite alternate 2s;
-    /* position: absolute; */
-}
-
-.car-wraper {
-    margin-top: 80px;
-    /* position: relative; */
 }
 
 
-/* keyframe animation */
-/* @keyframes caranimation {
-    0% {left: 0;}
-    20% {left: 200px;}
-    50% {left: 400px;}
-    70% {left: 600px;}
-    100% {left: 800px;}
-} */
-
-@keyframes caranimation2 {
-    0% {transform: translateX(0);}
-    20% {transform: translateX(200px);}
-    50% {transform: translateX(400px);}
-    70% {transform: translateX(600px);}
-    100% {transform: translateX(800px);}
+.size:nth-child(2) .text-wraper {
+    color: #fff;
 }
